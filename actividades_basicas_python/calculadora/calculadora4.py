@@ -24,7 +24,7 @@ def hacer_operacion():
     resultado=eval(ecuacion)
     e_texto.delete(0, END)
     e_texto.insert(0,resultado)
-    
+    i=0
 #botones
 
 boton1=Button(ventana, text="1", width=5, height=2, command=lambda:click_boton(1))
