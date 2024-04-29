@@ -68,7 +68,6 @@ print("")
 
 """ Con count, puedes consultar cuántas veces aparece un elemento dentro de una tupla  """
 
-
 animales = ("perro", "gato", "ratón", "serpiente", "caballo")
 cantidad_perros = animales.count("perro")
 print("Cantidad de 'perro' en la tupla:", cantidad_perros)
