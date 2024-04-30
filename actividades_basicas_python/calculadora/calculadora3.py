@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter import ttk
 import math
 
-root= TK()
+root= Tk()
 root.title("calculadora")
 root.geometry("500+80")
 

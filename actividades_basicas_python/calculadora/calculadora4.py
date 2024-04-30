@@ -5,7 +5,8 @@ ventana.title("calculadora")
 
 i=0
 
-#entrada
+#entrada de texto, Entry es unwidget de la biblioteca gráfica tkinte
+#permitir que el usuario ingrese datos de una sola línea en una ventana de interfaz gráfica de usuario (GUI).
 e_texto=Entry(ventana, font=("Calirbi 20"))
 e_texto.grid(row=0, column=0, columnspan=4, padx=5, pady=5)
 #funciones
@@ -20,13 +21,15 @@ def borrar():
     i=0
 
 def hacer_operacion():
-    ecuacion = e_texto.get()
+    ecuacion = e_texto.get() #obtener todo lo que tengo en la caja de texto
     resultado=eval(ecuacion)
     e_texto.delete(0, END)
     e_texto.insert(0,resultado)
     i=0
 #botones
-
+                                                    #conectar los bototnes a la pantalla
+                                                    #(metodo command) boton a una funcion
+                                                    #lambda nos permite crear una funcion en una linea
 boton1=Button(ventana, text="1", width=5, height=2, command=lambda:click_boton(1))
 boton2=Button(ventana, text="2", width=5, height=2, command=lambda:click_boton(2))
 boton3=Button(ventana, text="3", width=5, height=2, command=lambda:click_boton(3))
@@ -75,5 +78,5 @@ boton0.grid(row = 5, column =0 , columnspan=2, padx =5, pady = 5)
 boton_punto.grid(row = 5, column =2 , padx =5, pady = 5)
 boton_igual.grid(row = 5, column = 3, padx =5, pady = 5)
 
-
+#mainloop reconoce todos los eventos.
 ventana.mainloop()
